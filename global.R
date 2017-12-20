@@ -1,10 +1,10 @@
 library(SpaDES)  ## should automatically download all packages in the SpaDES family and their dependencies
 
 ## decide where you're working
-mainDir <- 'C:/Users/MrMe/SpaDES4Dummies/' # SET YOUR MAIN DIRECTORY HERE.
+mainDir <- '~/SpaDES4Dummies/' # SET YOUR MAIN DIRECTORY HERE.
 setPaths(cachePath = "cache",
          inputPath = "inputs",
-         modulePath = "m",
+         modulePath = "modules",
          outputPath = "outputs")
 
 getPaths() ## check that this is what you wanted
@@ -39,7 +39,17 @@ objectDiagram(mySim)
 dev() # on Windows and Mac, this opens external device if using Rstudio, it is faster
 clearPlot()
 <<<<<<< HEAD
+<<<<<<< HEAD
 spades(mySim, debug = TRUE)
 =======
 spades(mySim, debug = TRUE)
 >>>>>>> development
+=======
+spades(mySim, debug = TRUE)
+
+## TO INCLUDE IN DUMMY??
+## zip Module for posterior sharing from a github repo
+zipModule(name = "speciesAbundance", path = paths$modulePath)
+zipModule(name = "temperature", path = paths$modulePath)
+zipModule(name = "speciesTempLM", path = paths$modulePath)
+>>>>>>> upstream/development
